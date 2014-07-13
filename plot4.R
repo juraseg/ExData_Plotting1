@@ -13,12 +13,12 @@ par(mfrow = c(2, 2))
 # Global active power plot
 plot(household$datetime, household$Global_active_power, type="l", ylab = "Global Active Power", xlab = "")
 # Voltage plot
-plot(household$datetime, household$Voltage, type="l", ylab = "Voltage", xlab = "")
+plot(household$datetime, household$Voltage, type="l", ylab = "Voltage", xlab = "datetime")
 # Energy sub metering plot
 plot(household$datetime, household$Sub_metering_1, type="l", ylab = "Energy sub metering", xlab = "")
 points(household$datetime, household$Sub_metering_2, type="l", col="red")
 points(household$datetime, household$Sub_metering_3, type="l", col="blue")
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=c(1, 1, 1), col=c("black", "red", "blue"))
 # Global reactive power plot
-plot(household$datetime, household$Global_reactive_power, type="l", ylab = "Global Reactive Power", xlab = "")
+plot(household$datetime, household$Global_reactive_power, type="l", ylab = "Global Reactive Power", xlab = "datetime")
 dev.off()
